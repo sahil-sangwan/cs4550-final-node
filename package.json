@@ -1,0 +1,25 @@
+{
+  "name": "cs4550-final-node",
+  "version": "1.0.0",
+  "description": "Node.js web application for a social networking service oriented around runners/cyclists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahil-sangwan/cs4550-final-node.git"
+  },
+  "keywords": [
+    "node",
+    "REST",
+    "server",
+    "HTTP"
+  ],
+  "author": "Sahil Sangwan, David D'Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahil-sangwan/cs4550-final-node/issues"
+  },
+  "homepage": "https://github.com/sahil-sangwan/cs4550-final-node#readme"
+}
