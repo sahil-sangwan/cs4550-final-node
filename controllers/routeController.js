@@ -21,8 +21,8 @@ const deleteRoute = async (req, res) => {
     res.send(status);
 }
 export default (app) => {
-    app.post('/api/tuits', createRoute);
-    app.get('/api/tuits', findAllRoutes);
-    app.put('/api/tuits/:tid', updateRoute);
-    app.delete('/api/tuits/:tid', deleteRoute);
+    app.post('/api/routes', createRoute);
+    app.get('/api/routes', findAllRoutes);
+    app.put('/api/routes/:rid', updateRoute);
+    app.delete('/api/routes/:rid', deleteRoute);
 }
