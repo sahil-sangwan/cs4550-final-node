@@ -3,7 +3,7 @@ import cors from 'cors';
 import routeController from "./controllers/routeController.js";
 import mongoose from "mongoose";
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
-    || 'mongodb+srv://ssangwan:mSoShc6jv6w3Tw0J@cluster0.1ohtl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    || 'mongodb://localhost:27017/webdev'
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
