@@ -1,4 +1,4 @@
-const usersDao = require('../database/users/userDAO')
+const usersDao = require('../userDAO')
 
 const findAllUsers = async (req, res) => {
     const users = await usersDao.findAllUsers()

@@ -1,6 +1,21 @@
-const routeTileModel = require('./routeTileModel.js');
-export const findAllRoutes = () => routeTileModel.find();
-export const createRoute = (route) => routeTileModel.create(route);
-export const deleteRoute = (rid) => routeTileModel.deleteOne({_id: rid});
-export const updateRoute = (rid, route) => routeTileModel.updateOne({_id: rid}, {$set: route})
-export const findRoutesForCity = (city) => routeTileModel.find({network: city})
+const routeTileModel = require('./routeTileModel');
+
+const findAllRoutes = () => {
+    return routeTileModel.find();
+}
+const createRoute = (route) => {
+    return routeTileModel.create(route);
+}
+const deleteRoute = (rid) => {
+    return routeTileModel.deleteOne({_id: rid});
+}
+const updateRoute = (rid, route) => {
+    return routeTileModel.updateOne({_id: rid}, {$set: route})
+}
+const findRoutesForCity = (city) => {
+    return routeTileModel.find({network: city})
+}
+
+module.exports = {
+    findAllRoutes, createRoute, deleteRoute, updateRoute, findRoutesForCity
+}
