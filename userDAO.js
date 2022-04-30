@@ -1,4 +1,4 @@
-const usersModel = require('./users-model')
+const usersModel = require('./userModel')
 
 const findAllUsers = () => {
     return usersModel.find()
