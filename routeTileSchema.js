@@ -1,4 +1,4 @@
-require('mongoose');
+const mongoose = require("mongoose");
 const routeTileSchema = mongoose.Schema({
     network: String,
     origin: {
