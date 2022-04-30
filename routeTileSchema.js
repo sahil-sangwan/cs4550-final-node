@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+require('mongoose');
 const routeTileSchema = mongoose.Schema({
     network: String,
     origin: {
