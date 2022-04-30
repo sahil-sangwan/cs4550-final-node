@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import routeTileSchema from './routeTileSchema.js'
+const routeTileSchema = require('./routeTileSchema.js');
 const routeTileModel = mongoose
     .model('RouteTileModel', routeTileSchema);
-export default routeTileModel;
+module.exports = routeTileModel;
