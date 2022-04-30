@@ -1,4 +1,4 @@
-import * as routeTileDao from "../routeTileDAO.js";
+const routeTileDao = require ("../routeTileDAO.js");
 
 const createRoute = async (req, res) => {
     const newRoute = req.body;
