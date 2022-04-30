@@ -9,6 +9,7 @@ const findAllRoutes = async (req, res) => {
     const routes = await routeTileDao.findAllRoutes()
     res.json(routes);
 }
+
 const updateRoute = async (req, res) => {
     const routeIdToUpdate = req.params.rid;
     const updatedRoute = req.body;
@@ -20,9 +21,15 @@ const deleteRoute = async (req, res) => {
     const status = await routeTileDao.deleteRoute(routeIdToDelete);
     res.send(status);
 }
+const findCityRoutes = async (req, res) => {
+    const city = req.params.nname
+    const routes = await routeTileDao.findRoutesForCity(city)
+    res.json(routes);
+}
 export default (app) => {
     app.post('/api/routes', createRoute);
     app.get('/api/routes', findAllRoutes);
+    app.get('/api/routes/:nname', findCityRoutes);
     app.put('/api/routes/:rid', updateRoute);
     app.delete('/api/routes/:rid', deleteRoute);
 }

@@ -1,14 +1,15 @@
 import mongoose from 'mongoose';
 const schema = mongoose.Schema({
+    network: String,
     origin: {
-        location: String,
+        stationName: String,
         bikes: Number,
     },
     destination: {
-        location: String,
+        stationName: String,
         docks: Number,
     },
-    name: String,
+    routeName: String,
     type: String,
     rating: Number,
     postedBy: {
