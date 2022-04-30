@@ -1,4 +1,4 @@
-import routeTileModel from './routeTileModel.js';
+const routeTileModel = require('./routeTileModel.js');
 export const findAllRoutes = () => routeTileModel.find();
 export const createRoute = (route) => routeTileModel.create(route);
 export const deleteRoute = (rid) => routeTileModel.deleteOne({_id: rid});
