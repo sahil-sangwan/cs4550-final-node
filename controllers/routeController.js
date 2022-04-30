@@ -26,7 +26,7 @@ const findCityRoutes = async (req, res) => {
     const routes = await routeTileDao.findRoutesForCity(city)
     res.json(routes);
 }
-export default (app) => {
+module.exports = (app) => {
     app.post('/api/routes', createRoute);
     app.get('/api/routes', findAllRoutes);
     app.get('/api/routes/:nname', findCityRoutes);

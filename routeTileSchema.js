@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const schema = mongoose.Schema({
+const routeSchema = mongoose.Schema({
     network: String,
     origin: {
         stationName: String,
@@ -17,4 +17,4 @@ const schema = mongoose.Schema({
         uid: String,
     }
 }, {collection: 'routes'});
-export default schema;
+module.exports = routeSchema;
