@@ -1,7 +1,7 @@
-import express from 'express';
-import cors from 'cors';
+const mongoose = require('mongoose');
+const express = require('express');
+const cors = require('cors');
 const routeController = require("./controllers/routeController");
-import mongoose from "mongoose";
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
     || 'mongodb://localhost:27017/webdev'
 mongoose.connect(CONNECTION_STRING);
