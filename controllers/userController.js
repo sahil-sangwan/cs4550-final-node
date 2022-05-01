@@ -49,7 +49,7 @@ const signup = async (req, res) => {
     const user = req.body
     const existingUser = await usersDao
         .findUserByEmail(user.email)
-    if(existingUser) {
+    if(existingUser && existingUser != null) {
         res.sendStatus(403)
     } else {
         const actualUser = await usersDao
