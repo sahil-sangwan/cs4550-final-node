@@ -51,7 +51,7 @@ const signup = async (req, res) => {
         .findUserByEmail(user.email)
     console.log('Existing User: ')
     console.log(existingUser)
-    if(existingUser && existingUser != null) {
+    if(existingUser && existingUser !== null) {
         res.sendStatus(403)
     } else {
         const actualUser = await usersDao
