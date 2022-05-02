@@ -11,7 +11,7 @@ mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(cors({
     credentials: true,
-    origin: 'https://localhost:3000'
+    origin: 'http://localhost:3000'
 }));
 app.use(express.json());
 
