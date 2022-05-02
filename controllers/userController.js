@@ -10,13 +10,13 @@ const findUserById = async (req, res) => {
     res.json(user)
 }
 const findUserByEmail = async (req, res) => {
-    const email = req.params.email
+    const email = req.params.username
     const user = await usersDao.findUserByEmail(email)
     res.json(user)
 }
 const findUserByCredentials = async (req, res) => {
     const credentials = req.body
-    const email = credentials.email
+    const email = credentials.username
     const password = credentials.password
     const user = await usersDao.findUserByCredentials(email, password)
     if(user) {
@@ -48,7 +48,7 @@ const updateUser = async (req, res) => {
 const signup = async (req, res) => {
     const user = req.body
     const existingUser = await usersDao
-        .findUserByEmail(user.email)
+        .findUserByEmail(user.username)
     console.log('Existing User: ')
     console.log(existingUser)
     if(existingUser && existingUser !== null) {
